@@ -12,5 +12,9 @@
   "element.epicpersona.nuke": "Nuke",
   "element.epicpersona.bless": "Bless",
   "element.epicpersona.curse": "Curse",
-  "element.epicpersona.almighty": "Almighty"
+  "element.epicpersona.almighty": "Almighty",
+  "element.epicpersona.ailment": "Ailment",
+  "element.epicpersona.healing": "Healing",
+  "element.epicpersona.support": "Support",
+  "element.epicpersona.passive": "Passive"
 }

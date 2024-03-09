@@ -16,7 +16,12 @@ public enum Element {
     Nuke("nuke", false, true),
     Bless("bless", false, true),
     Curse("curse", false, true),
-    Almighty("almighty", false, false);
+    Almighty("almighty", false, false),
+    Ailment("ailment", false, false),
+    Healing("healing", false, false),
+    Support("support", false, false),
+    Passive("passive", false, false);
+
 
     private final String id;
     public final boolean canReflectPhysBarrier;

@@ -12,5 +12,9 @@
   "element.epicpersona.nuke": "核熱",
   "element.epicpersona.bless": "祝福",
   "element.epicpersona.curse": "呪怨",
-  "element.epicpersona.almighty": "万能"
+  "element.epicpersona.almighty": "万能",
+  "element.epicpersona.ailment": "異常",
+  "element.epicpersona.healing": "回復",
+  "element.epicpersona.support": "補助",
+  "element.epicpersona.passive": "自動"
 }
