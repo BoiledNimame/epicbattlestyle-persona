@@ -1,0 +1,16 @@
+{
+  "element.epicpersona.physical": "物理",
+  "element.epicpersona.strike": "打撃",
+  "element.epicpersona.slash": "斬撃",
+  "element.epicpersona.pierce": "貫通",
+  "element.epicpersona.gun": "銃撃",
+  "element.epicpersona.fire": "火炎",
+  "element.epicpersona.ice": "氷結",
+  "element.epicpersona.electric": "電撃",
+  "element.epicpersona.wind": "疾風",
+  "element.epicpersona.psy": "念動",
+  "element.epicpersona.nuke": "核熱",
+  "element.epicpersona.bless": "祝福",
+  "element.epicpersona.curse": "呪怨",
+  "element.epicpersona.almighty": "万能"
+}

@@ -1,0 +1,16 @@
+{
+  "element.epicpersona.physical": "Phys",
+  "element.epicpersona.strike": "Strike",
+  "element.epicpersona.slash": "Slash",
+  "element.epicpersona.pierce": "Pierce",
+  "element.epicpersona.gun": "Gun",
+  "element.epicpersona.fire": "Fire",
+  "element.epicpersona.ice": "Ice",
+  "element.epicpersona.electric": "Elec",
+  "element.epicpersona.wind": "Wind",
+  "element.epicpersona.psy": "Psy",
+  "element.epicpersona.nuke": "Nuke",
+  "element.epicpersona.bless": "Bless",
+  "element.epicpersona.curse": "Curse",
+  "element.epicpersona.almighty": "Almighty"
+}
