@@ -164,6 +164,11 @@ dependencies {
     implementation fg.deobf("curse.maven:epic-fight-mod-405076:5148975") // indispensable
     runtimeOnly fg.deobf("curse.maven:weapons-of-miracles-epicfight-918614:5135428")
 
+    // test for curiosAPI
+    implementation fg.deobf("curse.maven:curios-309927:4985315") // indispensable
+    runtimeOnly fg.deobf("curse.maven:cyclic-239286:4658622")
+    runtimeOnly fg.deobf("curse.maven:botania-225643:3936568")
+    runtimeOnly fg.deobf("curse.maven:patchouli-306770:3846086")
 
     // jei +
     runtimeOnly fg.deobf("curse.maven:jei-238222:5068328")
