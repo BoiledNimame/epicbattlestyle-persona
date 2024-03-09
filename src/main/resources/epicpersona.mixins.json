@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "boilednimame.epicpersona.mixin",
+  "package": "boilednimame.epicfightpersona.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "epicfightpersona.refmap.json",
   "mixins": [
