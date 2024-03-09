@@ -60,6 +60,11 @@ This mod add a command battle style like persona.
 [[dependencies."epicpersona"]]
    modId="epicfight"
    mandatory=true
-   # This version range declares a minimum of the current minecraft version up to but not including the next major version
    ordering="NONE"
    side="BOTH"
+
+[[dependencies."epicpersona"]]
+modId="curios"
+mandatory=true
+ordering="NONE"
+side="BOTH"
