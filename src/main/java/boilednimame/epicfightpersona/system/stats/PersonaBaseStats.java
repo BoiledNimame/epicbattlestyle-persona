@@ -1,4 +1,4 @@
-package boilednimame.epicfightpersona.system;
+package boilednimame.epicfightpersona.system.stats;
 
 public enum PersonaBaseStats {
     STR("st"),
