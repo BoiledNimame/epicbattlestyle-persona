@@ -1,10 +1,8 @@
-package boilednimame.epicfightpersona.system;
+package boilednimame.epicfightpersona.system.element;
 
 import boilednimame.epicfightpersona.EP;
 import net.minecraft.client.resources.language.I18n; // lang ごとに違うの呼び出す guiとかで使いましょうね;;
 import net.minecraft.locale.Language;
-
-import java.util.Objects;
 
 public enum Element {
     Phys("physical", true, false),
