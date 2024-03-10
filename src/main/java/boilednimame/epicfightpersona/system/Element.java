@@ -22,22 +22,25 @@ public enum Element {
     Support("support", false, false),
     Passive("passive", false, false);
 
-
     private final String id;
+    private final String elementName;
     public final boolean canReflectPhysBarrier;
     public final boolean CanReflectMagicBarrier;
 
-    public final String lang;
-    private final String langSuffix = "element.epicpersona.";
 
     Element(String id, boolean canReflectPhysBarrier, boolean canReflectMagicBarrier) {
         this.id = id;
-        this.lang = langSuffix.concat(id);
         this.canReflectPhysBarrier = canReflectPhysBarrier;
         this.CanReflectMagicBarrier = canReflectMagicBarrier;
+        this.elementName = I18n.get("element.epicpersona.".concat(id));
     }
 
     public boolean equals(Element e) {
         return this.id.equals(e.id);
+    }
+
+    // WARN サーバー側で呼ばれちゃいけない. 鯖側からのレスポンスとして使用しないこと. または, configで決める
+    public String getNameOnCurrentLang() {
+        return this.elementName;
     }
 }
