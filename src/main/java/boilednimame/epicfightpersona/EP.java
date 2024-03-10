@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 public class EP implements Const {
 
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public static final ServerConfig SERVER_CONFIG = new ServerConfig();
 

@@ -1,6 +1,10 @@
 package boilednimame.epicfightpersona.system;
 
+import boilednimame.epicfightpersona.EP;
 import net.minecraft.client.resources.language.I18n; // lang ごとに違うの呼び出す guiとかで使いましょうね;;
+import net.minecraft.locale.Language;
+
+import java.util.Objects;
 
 public enum Element {
     Phys("physical", true, false),
@@ -28,11 +32,14 @@ public enum Element {
     public final boolean CanReflectMagicBarrier;
 
 
+
     Element(String id, boolean canReflectPhysBarrier, boolean canReflectMagicBarrier) {
         this.id = id;
         this.canReflectPhysBarrier = canReflectPhysBarrier;
         this.CanReflectMagicBarrier = canReflectMagicBarrier;
-        this.elementName = I18n.get("element.epicpersona.".concat(id));
+        if (!Language.DEFAULT.equals(EP.SERVER_CONFIG.getEP().getLang())) {
+            EP.LOGGER.warn("The config and current language are different! Some displays may have unexpected results.");
+        }this.elementName = I18n.get("element.epicpersona.".concat(id));
     }
 
     public boolean equals(Element e) {
