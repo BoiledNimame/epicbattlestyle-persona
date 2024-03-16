@@ -46,7 +46,7 @@ public class PersonaStats implements ElementAffinity {
                          * もっと高くしてもいいかもしれない -> 絞首刑etc...
                          * ここの定数を弄る場合はGeoGebraを使ってテストするとよい.
                          */
-                        nextExp = 20 + (level/6)*(3*level + 1) * (2*level + 1);
+                        nextExp = 20 + (level/6)*(2*level + 1) * (level + 1);
                     } else {
                         if (level == MAX_LEVEL) {
                             nextExp = 0;
