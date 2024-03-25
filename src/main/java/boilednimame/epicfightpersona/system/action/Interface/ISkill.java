@@ -2,7 +2,7 @@ package boilednimame.epicfightpersona.system.action.Interface;
 
 import boilednimame.epicfightpersona.system.Effect;
 import boilednimame.epicfightpersona.system.element.Element;
-import boilednimame.epicfightpersona.system.stats.PlayerStats;
+import boilednimame.epicfightpersona.system.stats.PlayerBattleStats;
 
 import java.util.UUID;
 
@@ -13,7 +13,7 @@ public interface ISkill {
     Element includeElement = null;
 
     boolean isConsumeStats = false;
-    PlayerStats consumedStats = null;
+    PlayerBattleStats consumedStats = null;
 
     boolean isDealDamage = false;
     long baseDamage = -1;

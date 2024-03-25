@@ -1,50 +1,41 @@
 package boilednimame.epicfightpersona.system.stats;
 
-import boilednimame.epicfightpersona.system.Effect;
+import boilednimame.epicfightpersona.EP;
+import boilednimame.epicfightpersona.config.ServerConfig;
+import net.minecraft.world.entity.player.Player;
 
-import java.util.HashMap;
-import java.util.Map;
+import javax.annotation.Nullable;
 
 public class PlayerStats {
-    int hp;
-    final int maxHp;
-    int sp;
-    final int maxSp;
+    final ServerConfig.EpicPersona SERVER_CONFIG = EP.SERVER_CONFIG.getEP();
 
-    private int level;
+    final int hpLimit = SERVER_CONFIG.getPlayerMaxHP();
+    final int spLimit = SERVER_CONFIG.getPlayerMaxSP();
+
+    int hp;
+    int sp;
+    int level;
     private final int MAX_LEVEL = 99;
     private final int[] nextExps = new int[MAX_LEVEL+1];
 
-    int attack;
-    final int baseAttack;
-    int defense;
-    final int baseDefence;
-    int agility;
-    final int baseAgility;
+    // 所持してるやつのリスト id式にしたら, LinkedHashMapでもいいかも?
+    private PersonaStats[] possessionPersonas;
 
-    Map<Effect, Integer> currentEffect;
+    public PlayerStats(Player player, int hp, int sp, int level, int nextExp, @Nullable PersonaStats[] possessionPersonas) {
+        if (hp == -1) {
+            this.hp = Math.round(player.getMaxHealth());
+        } else {
+            this.hp = hp;
+        }
+        if (sp == -1) {
+            this.sp = spLimit;
+        } else {
+            this.sp = sp;
+        }
 
-    public PlayerStats(int hp, int maxHp, int sp, int maxSp,
-                       int baseStatAtk, int baseStatDef, int baseStatAgi,
-                       int level, int nextExp) {
-        // これ`Player`クラス内で戦闘開始時に呼ばれるようにしたい
-
-        // 基礎ステ
-        this.hp = hp;
-        this.sp = sp;
-        this.attack = baseStatAtk;
-        this.defense = baseStatDef;
-        this.agility = baseStatAgi;
-        this.maxHp = maxHp;
-        this.maxSp = maxSp;
-        this.baseAttack = baseStatAtk;
-        this.baseDefence = baseStatDef;
-        this.baseAgility = baseStatAgi;
         this.level = level;
         this.nextExps[level] = nextExp;
-
-        // 後で使うやつら
-        currentEffect = new HashMap<>();
+        this.possessionPersonas = possessionPersonas;
 
         /*
          * 参照-主人公の必要Exp:
@@ -80,17 +71,5 @@ public class PlayerStats {
                 }
             }
         }
-    }
-
-    // Effect
-    public void applyEffect(Effect effect, int duration_turn) {
-        if (currentEffect.containsKey(effect)) {
-            currentEffect.replace(effect, duration_turn);
-        } else {
-            currentEffect.put(effect, duration_turn);
-        }
-    }
-    public Map<Effect, Integer> getEffects() {
-        return currentEffect;
     }
 }

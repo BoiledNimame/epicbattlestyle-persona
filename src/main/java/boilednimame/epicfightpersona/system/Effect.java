@@ -37,10 +37,13 @@ public enum Effect {
     // Charged Effects
     Charged("charged"),
     Focused("focused"),
+    UniversalCharge("universalcharge"),
 
     // Protective Effects
+    Guard("guard"),
     PhysicalBarrier("physBarrier"),
     MagicBarrier("magicBarrier"),
+    UniversalBarrier("universalbarrier"),
 
     // Elemental Walls (precedence over Elemental Break)
     FireWall("fireWall"),
@@ -66,7 +69,7 @@ public enum Effect {
     Panicked("panicked"),
     ATKDown("atkDownSpecial");
 
-    private String id;
+    private final String id;
 
     Effect(String id) {
         this.id = id;
