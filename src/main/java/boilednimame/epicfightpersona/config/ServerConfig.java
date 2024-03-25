@@ -2,10 +2,6 @@ package boilednimame.epicfightpersona.config;
 
 import boilednimame.epicfightpersona.Const;
 import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.config.ModConfig;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ServerConfig implements Const {

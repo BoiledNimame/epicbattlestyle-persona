@@ -4,7 +4,6 @@ import boilednimame.epicfightpersona.system.element.Element;
 import boilednimame.epicfightpersona.system.element.ElementAffinity;
 
 import java.util.EnumMap;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
